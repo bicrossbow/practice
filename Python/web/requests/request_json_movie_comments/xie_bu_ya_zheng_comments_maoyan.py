@@ -35,7 +35,9 @@ def parse_one_page(html):
         }
 
 def save_to_text(file_name):
-    for i in range(1,1001):
+    page_start = 479
+    page_end = 1001
+    for i in range(479,page_end):
         url = 'http://m.maoyan.com/mmdb/comments/movie/248566.json?_v_=yes&offset=' + str(i)
         html = get_one_page(url)
         print('Saving page{}'.format(i))
