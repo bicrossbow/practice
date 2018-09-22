@@ -14,8 +14,8 @@ def get_dic_city_name_count(list_city):
 
 if __name__ == '__main__':
 
-    file_name_comments_org = 'xie_bu_ya_zheng_comments.txt'
-    file_name_comments = 'xie_bu_ya_zheng_comments_backup.txt'
+    file_name_comments_org = 'xie_bu_ya_zheng_comments_remove_dup.txt'
+    file_name_comments = 'xie_bu_ya_zheng_comments_remove_dup_backup.txt'
     os.system('cp {scr} {des}'.format(scr=file_name_comments_org,des=file_name_comments))
     
     # load city info
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # geo.add_coordinate("璧山", 106.2273, 29.5920)
    
     geo.add("",attr,value,\
-    visual_range=[0, 100], \
+    visual_range=[0, 20], \
     maptype='china',\
     visual_text_color="#fff",\
     symbol_size=10,\

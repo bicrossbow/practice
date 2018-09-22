@@ -35,9 +35,9 @@ def parse_one_page(html):
         }
 
 def save_to_text(file_name):
-    page_start = 479
+    page_start = 1001
     page_end = 1001
-    for i in range(479,page_end):
+    for i in range(page_start,page_end):
         url = 'http://m.maoyan.com/mmdb/comments/movie/248566.json?_v_=yes&offset=' + str(i)
         html = get_one_page(url)
         print('Saving page{}'.format(i))
@@ -64,5 +64,5 @@ if __name__ == '__main__':
     file_name = 'xie_bu_ya_zheng_comments.txt'
     file_name_no_dup = 'xie_bu_ya_zheng_comments_remove_dup.txt'
     save_to_text(file_name)
-    remove_dupline(file_name,outffile_name_no_dupile)
+    remove_dupline(file_name,file_name_no_dup)
     
